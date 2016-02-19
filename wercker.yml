@@ -24,7 +24,9 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
-    
+    - script:
+        name: install bower
+        code: sudo npm install -g bower
     - script:
         name: run bower install
         code: bower install
